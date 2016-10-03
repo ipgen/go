@@ -23,12 +23,12 @@ import (
 
 fn main() {
   // Compute subnet ID
-  subnet := ipgen::Subnet("App 1") 
+  subnet := ipgen.Subnet("App 1") 
   fmt.Println("%s", subnet) // output: ba3d
   
   // Or compute an IPv6 address
   // Note you can also pass in an IPv4 network to generate an IPv4
-  ip, err := ipgen::IP("App 1", "fd52:f6b0:3162::/48")
+  ip, err := ipgen.IP("App 1", "fd52:f6b0:3162::/48")
   if err != nil {
     // Handle your error here
     // An error here means your network address is not valid
