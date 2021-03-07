@@ -21,10 +21,10 @@ import (
   "github.com/ipgen/go"
 )
 
-fn main() {
+func main() {
   // Compute subnet ID
   subnet := ipgen.Subnet("App 1") 
-  fmt.Println("%s", subnet) // output: ba3d
+  fmt.Println(subnet) // output: ba3d
   
   // Or compute an IPv6 address
   // Note you can also pass in an IPv4 network to generate an IPv4
@@ -33,6 +33,6 @@ fn main() {
     // Handle your error here
     // An error here means your network address is not valid
   }
-  fmt.Println("%s", ip) // output: fd52:f6b0:3162:46a1:2a4f:89e8:8aed:1327
+  fmt.Println(ip) // output: fd52:f6b0:3162:46a1:2a4f:89e8:8aed:1327
 }
 ```
